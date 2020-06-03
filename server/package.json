@@ -5,6 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0",
     "typescript": "^3.9.3"
   },
   "devDependencies": {
@@ -13,7 +15,8 @@
     "ts-node-dev": "^1.0.0-pre.44"
   },
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "knex:migrations":"knex migrate:latest --knexfile knexfile.ts migrate:latest"
   },
   "author": "",
   "license": "ISC"
