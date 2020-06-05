@@ -5,6 +5,7 @@
 
 # production
 /build
+/src/database/database.sqlite
 
 # misc
 .DS_Store
