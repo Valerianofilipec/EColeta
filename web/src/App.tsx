@@ -1,15 +1,10 @@
-import React from 'react';
-import './App.css';
+import React from "react"
+import "./App.css"
+
+import Routes from "./routes"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Esta App vai dar merda</h1>
-        <h3>Valeriano Filipe Calológio</h3>
-      </header>
-    </div>
-  );
+  return <Routes />
 }
 
-export default App;
+export default App
