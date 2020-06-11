@@ -75,7 +75,7 @@ const CreatePoint: React.FC = () => {
 
       const ufInitials = response.data.map((uf) => uf.sigla)
 
-      setUfs(ufInitials)
+      setUfs(ufInitials) //(['LIS','POR', 'BRA', 'COI', 'AVE'])
     }
 
     loadUfs()
