@@ -5,9 +5,7 @@ import { Map, TileLayer, Marker } from "react-leaflet"
 import { LeafletMouseEvent } from "leaflet"
 import axios from "axios";
 import api from "../../services/api"
-
 import "./styles.css"
-
 import logo from "../../assets/logo.svg"
 
 interface Item {
@@ -25,7 +23,7 @@ interface IBGECityResponse {
 }
 
 const CreatePoint: React.FC = () => {
-  const [items, setItems] = useState<Item[]>([])
+  const [items, setItems] = useState<Item[]>([]) //OBS: Sendo o '<Item[]>' O argumento de tipagem
   const [ufs, setUfs] = useState<string[]>([])
   const [cities, setCities] = useState<string[]>([])
 
@@ -59,8 +57,7 @@ const CreatePoint: React.FC = () => {
 
   useEffect(() => {
     async function loadItems() {
-      const response = await api.get("/items")
-
+      const response = await api.get('/items')
       setItems(response.data)
     }
 

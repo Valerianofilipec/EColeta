@@ -7,8 +7,8 @@ import CreatePoint from './pages/createPoint'
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Route component={Home} path="/" exact ></Route>/>
-      <Route component={CreatePoint} path="/create-point" exact ></Route>/>
+      <Route component={Home} path="/" exact ></Route>
+      <Route component={CreatePoint} path="/create-point" exact ></Route>
     </BrowserRouter>
   )
 }
