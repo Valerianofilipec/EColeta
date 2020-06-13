@@ -51,18 +51,19 @@ This project was developed with the following technologies:
 - [React][reactjs]
 - [React Native][rn]
 - [Expo][expo]
+- [Figma][figma]
 
 ## 🔖 Layout
 
-To access the layout use [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/).
+To access the layout use [Figma](https://www.figma.com/file/Zt0Dtvu1XcLqrcFD6FEQ0T/Ecoleta-Copy?node-id=136%3A546).
 
 ## :information_source: How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js][nodejs] + [Npm][npm] installed on your computer.
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js][nodejs] + [Yarn][yarn]/[Npm][npm] installed on your computer.
 
 From your command line:
 
-### Install API 
+### Install API (SERVER)
 
 ```bash
 # Clone this repository
@@ -72,16 +73,16 @@ $ git clone https://github.com/Valerianofilipec/Ecoleta
 $ cd Ecoleta/server
 
 # Install dependencies
-$ npm install
+$ yarn install
 
 # Run Migrates
-$ npm knex:migrate
+$ yarn knex:migrate
 
 # Run Seeds
-$ npm knex:seed
+$ yarn knex:seed
 
 # Start server
-$ npm run dev
+$ yarn run dev
 
 # running on port 3333
 ```
@@ -96,10 +97,10 @@ $ git clone https://github.com/Valerianofilipec/Ecoleta
 $ cd Ecoleta/web
 
 # Install dependencies
-$ npm install
+$ yarn install
 
 # Run
-$ npm start
+$ yarn start
 
 # running on port 3000
 ```
@@ -141,11 +142,11 @@ This project is under the MIT license. See the [LICENSE](https://github.com/Vale
 
 Made with ♥ by Valeriano Filipe Calológio :wave: [Get in touch!](https://www.linkedin.com/in/valerianofilipec/)
 
+[figma]: https://www.figma.com/
 [nodejs]: https://nodejs.org/
 [typescript]: https://www.typescriptlang.org/
 [expo]: https://expo.io/
 [reactjs]: https://reactjs.org
 [rn]: https://facebook.github.io/react-native/
 [yarn]: https://yarnpkg.com/
-
-Marketplace de coleta de resíduos entre Empresas/Entidades que coletam resíduos(Orgánicos/Inorgánicos) às pessoas que precisam descartar os mesmos.
+[npm]: https://www.npmjs.com/
