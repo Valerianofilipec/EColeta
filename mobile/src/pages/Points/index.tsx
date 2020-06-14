@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native'
 
 const Points = () => {
   return(
-    <View>
+    <View style={styles.container}>
       <Text>Points</Text>
     </View>
   )
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 32,
-    paddingTop: 20 + Constants.statusBarHeight,
+    //paddingTop: 20 + Constants.statusBarHeight,
   },
 
   title: {

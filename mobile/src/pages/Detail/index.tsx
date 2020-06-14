@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native'
 
 const Detail = () => {
   return(
-    <View>
+    <View style={styles.container}>
       <Text>Detail</Text>
     </View>
   )
