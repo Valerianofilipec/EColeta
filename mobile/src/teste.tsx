@@ -1,0 +1,1 @@
+// BUG_007 reagiu com um 'adoro' ao teu código! XD
