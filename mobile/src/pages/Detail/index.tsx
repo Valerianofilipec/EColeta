@@ -15,6 +15,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 32,
     paddingTop: 20,
+    justifyContent: 'center', //Apagar
+    textAlign: 'center', //Apagar
   },
 
   pointImage: {
