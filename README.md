@@ -97,10 +97,10 @@ $ git clone https://github.com/Valerianofilipec/Ecoleta
 $ cd Ecoleta/web
 
 # Install dependencies
-$ yarn install
+$ npm install
 
 # Run
-$ yarn start
+$ npm start
 
 # running on port 3000
 ```
