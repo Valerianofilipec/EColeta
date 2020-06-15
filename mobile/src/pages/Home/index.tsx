@@ -8,10 +8,10 @@ const Home = () => {
   const navigation = useNavigation()
 
   function handleNavigateToPoints() {
-    navigation.navigate("Points", {
+    navigation.navigate('Points', {
       //uf,
       //city,
-    });
+    })
   }
 
   return (
@@ -32,7 +32,7 @@ const Home = () => {
       <View style={styles.footer}>
         <RectButton style={styles.button} onPress={handleNavigateToPoints}>
           <View style={styles.buttonIcon}>
-            <Icon name="arrow-right" color="#fff" size={24} />
+            <Icon name='arrow-right' color='#fff' size={24} />
           </View>
           <Text style={styles.buttonText}>Entrar</Text>
         </RectButton>
