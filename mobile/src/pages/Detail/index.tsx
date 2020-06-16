@@ -8,14 +8,11 @@ import {
   SafeAreaView,
   Linking,
 } from 'react-native'
-
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Feather as Icon } from '@expo/vector-icons'
 import { FontAwesome } from '@expo/vector-icons'
 import { RectButton } from 'react-native-gesture-handler'
-
 import * as MailComposer from 'expo-mail-composer'
-
 import api from '../../services/api'
 
 interface Params {
@@ -165,6 +162,7 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: '#999',
     paddingVertical: 20,
+    paddingBottom: 0,
     paddingHorizontal: 32,
     flexDirection: 'row',
     justifyContent: 'space-between',
