@@ -24,7 +24,6 @@ interface Point {
 }
 
 interface Params {
-  uf: string;
   city: string;
 }
 
@@ -81,7 +80,6 @@ const Points = () => {
       const response = await api.get('/points', {
         params: {
           city: routeParams.city,
-          uf: routeParams.uf,
           items: selectedItems,
         },
       })

@@ -3,8 +3,7 @@ import {Request, Response} from 'express'
 
 class PointsController{
     async index(request: Request, response: Response){
-        const {city, uf, items} = request.query
-
+        const {city, items} = request.query
         const parsedItems = String(items).
             split(',')
             .map((item) => Number(item.trim()))
@@ -13,7 +12,6 @@ class PointsController{
             .join('point_items', 'points.id', '=', 'point_items.point_id')
             .whereIn('point_items.item_id', parsedItems)
             .where('city', String(city))
-            .where('uf', String(uf))
             .distinct()
             .select('points.*')
         
@@ -40,7 +38,6 @@ class PointsController{
             latitude,
             longitude,
             city,
-            uf,
             items
         } = request.body
 
@@ -53,8 +50,7 @@ class PointsController{
             whatsapp,
             latitude,
             longitude,
-            city,
-            uf
+            city
         }
         const insertedIds = await trx('points').insert(point)
         const point_id = insertedIds[0]
