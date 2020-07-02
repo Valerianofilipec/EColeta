@@ -156,7 +156,9 @@ const Points = () => {
           )}
         </View>
       </View>
+
       <View style={styles.itemsContainer}>
+        
         <ScrollView
           contentContainerStyle={{
             paddingHorizontal: 32,
@@ -164,6 +166,9 @@ const Points = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
         >
+          <View>
+          <Text> Obs: Bug no ScrollView das imagens  server!!!</Text>
+        </View>
           {items.map((item) => (
             <TouchableOpacity
               key={String(item.id)}

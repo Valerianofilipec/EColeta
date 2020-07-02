@@ -14,14 +14,12 @@ import { Feather as Icon } from '@expo/vector-icons'
 import {useNavigation} from '@react-navigation/native'
 
 const Home = () => {
-  const [uf, setUf] = useState('')
   const [city, setCity] = useState('')
   const navigation = useNavigation()
 
   function handleNavigateToPoints() {
     navigation.navigate('Points', {
-      uf,
-      city,
+      city
     })
   }
 
@@ -51,15 +49,6 @@ const Home = () => {
           </View>
         </View>
         <View style={styles.footer}>
-          <TextInput
-            style={styles.input}
-            value={uf}
-            onChangeText={setUf}
-            maxLength={2}
-            autoCapitalize='characters'
-            autoCorrect={false}
-            placeholder='Digite a UF'
-          />
           <TextInput
             style={styles.input}
             placeholder='Digite a cidade'

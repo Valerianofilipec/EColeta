@@ -27,7 +27,6 @@ interface Data {
     email: string
     whatsapp: string
     city: string
-    uf: string
   }
   items: {
     title: string
@@ -93,7 +92,7 @@ const Detail: React.FC = () => {
         <View style={styles.address}>
           <Text style={styles.addressTitle}>Endereço</Text>
           <Text style={styles.addressContent}>
-            {data.point.city}, {data.point.uf}
+            {data.point.city}
           </Text>
         </View>
       </View>

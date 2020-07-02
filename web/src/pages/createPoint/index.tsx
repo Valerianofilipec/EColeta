@@ -13,18 +13,18 @@ interface Item {
   title: string
   image_url: string
 }
-
+/*
 interface IBGEUFResponse {
   sigla: string
 }
-
+*/
 interface IBGECityResponse {
   nome: string
 }
 
 const CreatePoint: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]) //OBS: Sendo o '<Item[]>' O argumento de tipagem
-  const [ufs, setUfs] = useState<string[]>([])
+  //const [ufs, setUfs] = useState<string[]>([])
   const [cities, setCities] = useState<string[]>([])
 
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ const CreatePoint: React.FC = () => {
   })
 
   const [selectedItems, setSelectedItems] = useState<number[]>([])
-  const [selectedUf, setSelectedUf] = useState<string>("0")
+  //const [selectedUf, setSelectedUf] = useState<string>("0")
   const [selectedCity, setSelectedCity] = useState<string>("0")
   const [selectedPosition, setSelectedPosition] = useState<[number, number]>([
     0,
@@ -63,13 +63,14 @@ const CreatePoint: React.FC = () => {
 
     loadItems()
   }, [])
-
+/*
   useEffect(() => {
     async function loadUfs() {
+      
       const response = await axios.get<IBGEUFResponse[]>(
         "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
       )
-
+      
       const ufInitials = response.data.map((uf) => uf.sigla)
 
       setUfs(ufInitials) //(['LIS','POR', 'BRA', 'COI', 'AVE'])
@@ -77,7 +78,8 @@ const CreatePoint: React.FC = () => {
 
     loadUfs()
   }, [])
-
+  */
+/*
   useEffect(() => {
     async function loadCities() {
       if (selectedUf === "0") return
@@ -92,12 +94,12 @@ const CreatePoint: React.FC = () => {
     }
 
     loadCities()
-  }, [selectedUf])
-
+  })*/
+/*
   function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
     setSelectedUf(event.target.value)
   }
-
+*/
   function handleSelectCity(event: ChangeEvent<HTMLSelectElement>) {
     setSelectedCity(event.target.value)
   }
@@ -128,7 +130,7 @@ const CreatePoint: React.FC = () => {
     event.preventDefault()
 
     const { name, email, whatsapp } = formData
-    const uf = selectedUf
+    //const uf = selectedUf
     const city = selectedCity
     const [latitude, longitude] = selectedPosition
     const items = selectedItems
@@ -137,7 +139,6 @@ const CreatePoint: React.FC = () => {
       name,
       email,
       whatsapp,
-      uf,
       city,
       latitude,
       longitude,
@@ -221,19 +222,6 @@ const CreatePoint: React.FC = () => {
           </Map>
 
           <div className="field-group">
-            <div className="field">
-              <label htmlFor="uf">Estado (UF)</label>
-
-              <select onChange={handleSelectUf} name="uf" id="uf">
-                <option value="0">Selecione uma UF</option>
-                {ufs.map((uf) => (
-                  <option key={uf} value={uf}>
-                    {uf}
-                  </option>
-                ))}
-              </select>
-            </div>
-
             <div className="field">
               <label htmlFor="city">Cidade</label>
               <select onChange={handleSelectCity} name="city" id="city">
